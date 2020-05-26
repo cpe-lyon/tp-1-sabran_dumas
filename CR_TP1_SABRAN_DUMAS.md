@@ -131,44 +131,61 @@ Quelle commande nous donne le nombre d’utilisateurs ayant un compte sur cette 
 > la commande `getent passwd` permet de donnée l'ensemble des utilisateurs ayant un compte sur la machine (et qui ne sont pas forcément connectés).
 
 ### Question 19
+Combien de pages de manuel comportent le mot-clé conversion dans leur description ?
 > la commande `man -k` conversion nous indique dans quelle page du manuel est present le mot conversion. Dans notre cas, il y en a 4.
 
 ### Question 20
+A l’aide de la commande find, recherchez tous les fichiers se nommant passwd présents sur la machine
 > la commande `find -name "passwd"` recherche tous les fichiers se nommant passwd.
 
 ### Question 21
+Modifiez la commande précédente pour que la liste des fichiers trouvés soit enregistrée dans le fichier
+~/list_passwd_files.txt et que les erreurs soient redirigées vers le fichier spécial /dev/null
 > En modifiant la commande de la question précédente, on peut enregistrer la liste des fichiers trouvée dans un nouveau fichier par la commande :  `find -name "passwd" > ~/list_passwd_files.txt`.
 > On peut aussi mettre les erreurs dans le fichier special `/dev/null` par la commande :  `find -name "passwd" 2> /dev/null`.
 
 ### Question 22
+Dans votre dossier personnel, utilisez la commande grep pour chercher où est défini l’alias ll vu
+précédemment
 > la commande `grep ll` dans notre dossier personnel tourne en boucle, il n'y a pas cet alias dans notre dossier personnel.
 
 ### Question 23
+Utilisez la commande locate pour trouver le fichier history.log
 > la commande `locate history.log` nous donne le chemin ou est localisé le fichier history.log. Son chemin est : /var/log/apt/history.log.
 
 ### Question 24
+Créer un fichier dans votre dossier personnel puis utilisez locate pour le trouver. Apparaît-il ? Pourquoi ?
 > Suite à la création d'un nouveau fichier (`touch coucou`), la commande 'locate coucou' ne fonctionne pas. En effet, la commande locate va chercher le chemin du fichier dans une base de données et non pas directement au sein de l'arborescence. Sachant que cette base de données est update toutes les 24h, il est normal de ne pas trouver notre nouveau fichier. On peut mettre à jour la base de données avec la commande `update db`.
+
 
 # Exercice 3 - Decouverte de l'éditeur de texte nano
 
 ### Question 1
+Copiez le fichier /var/log/syslog dans votre dossier personnel sous le nom log.txt, puis ouvrez-le avec
+nano
 > la commande `cp /var/log/syslog /home/ckali` permet de copier le fichier syslog et le coller dans le dossier ckali.
 > Pour changer le nom du fichier, on utilise la commande `mv syslog log.txt`. Ainsi, le fichier syslog est renommé en log.txt.
 
 ### Question 2
+Remplacez toutes les occurrences du mot kernel par le mot noyau
 > On ouvre nano en tappant `nano` dans le shell.
 > On utilise la commande `CTRL + \` pour modifier les termes que l'on souhaite.
 
 ### Question 3
+Déplacer les 10 premières lignes à la fin du fichier
 > On utilise la commande `CTRL + K` pour couper la ligne souhaité (qui est sauvegardé) puis `CTRL + U` pour la coller. On se deplace ensuite à la fin du fichier texte et on refait la commande `CTRL +U` pour copier la ligne.
 
 ### Question 4
+Annulez cette action
 >On utilise la commande `ALT + U` pour annuler l'action.
 
 ### Question 5
+Enregistrez le fichier avant de quitter nano
 > On enregistre le fichier avec `CTRL + O` et on quitte avec `CTRL + X`.
 
 # Exercice 4 - Personnalisation du SHELL
 
 ### Question 4 
 > On ajoute le code `[033[01;35m\]\A\[\033[00m\]` sur la ligne PS1 =  pour ajouter l'heure en magenta.
+Les lignes commençant par `PS1=` indiquent la mise en forme de l’invite de commande
+
