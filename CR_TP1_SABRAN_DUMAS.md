@@ -25,15 +25,15 @@ première page de la section 6 ; de quoi parle cette section ?
 
 ## Navigation dans l’arborescence des fichiers
 
-cd : revient au dossier $HOME (dossier de l’utilisateur)
-cd chemin : va dans le dossier spécifié par chemin
-cd .. : remonte dans le dossier parent
-cd - : revient au dossier dans lequel on était précédemment
-ls : lister les répertoires et fichiers.
-pwd : afficher le répertoire où l'on se trouve exactement
+> cd : revient au dossier $HOME (dossier de l’utilisateur)
+> cd chemin : va dans le dossier spécifié par chemin
+> cd .. : remonte dans le dossier parent
+> cd - : revient au dossier dans lequel on était précédemment
+> ls : lister les répertoires et fichiers.
+> pwd : afficher le répertoire où l'on se trouve exactement
 
-touch : créer un fichier.
-mkdir : créer un dossier.
+> touch : créer un fichier.
+> mkdir : créer un dossier.
 
 ### Question 5/6
 Essayez d’accéder au dossier /root ; que se passe-t-il ?
